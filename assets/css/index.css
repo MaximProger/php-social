@@ -1,0 +1,141 @@
+:root {
+    --main-bg-color: #5D3FD3;
+    --darken-bg-color: #492bbd;
+    --text-color-dark: #1a1e21;
+}
+
+button:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {
+    box-shadow: 0 0 0 0.25rem rgba(93, 63, 211, 0.25) !important;
+    border-color: var(--main-bg-color) !important;
+}
+
+.post-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #fff;
+}
+
+.post-card__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.post-card__author {
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-right: 16px;
+
+    text-decoration: none;
+}
+
+.post-card__author:hover .post-card__name {
+    border-color: var(--text-color-dark);
+}
+
+.post-card__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+
+    background-color: var(--main-bg-color);
+    border-radius: 50%;
+    color: #fff;
+}
+
+.post-card__name {
+    display: block;
+
+    transition: border-color .2s linear;
+
+    border-bottom: 1px solid transparent;
+    color: var(--text-color-dark);
+}
+
+.post-card__time {
+    display: block;
+
+    color: var(--text-color-dark);
+    opacity: 0.7;
+}
+
+.post-card__actions {
+    display: flex;
+}
+
+.post-card__action {
+    margin-right: 8px;
+
+    transition: border-color .2s linear;
+
+    border: none;
+    border-bottom: 1px solid transparent;
+    background: none;
+}
+
+.post-card__action:last-child {
+    margin-right: 0;
+}
+
+.post-card__action:hover {
+    border-color: currentColor;
+}
+
+.post-card__reply {
+    color: #0d6efd;
+}
+
+.post-card__remove {
+    color: #dc3545;
+}
+
+.comments-form__textarea {
+    min-height: 120px !important;
+}
+
+.btn-indigo {
+    background-color: var(--main-bg-color);
+    border-color: var(--main-bg-color);
+    color: #fff;
+}
+
+.btn-indigo:hover {
+    background-color: var(--darken-bg-color);
+    border-color: var(--darken-bg-color);
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .post-card__footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .post-card__wrapper {
+        margin-bottom: 12px;
+    }
+}
